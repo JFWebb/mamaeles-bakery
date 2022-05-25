@@ -90,18 +90,33 @@ app.patch("/shop/:id", (req, res) => {
     // req.body.qty = Number (req.body.qty)
     // console.log(req.body);
     // req.body.qty -= req.body.qty;
-    console.log(req.body)
-    Product.findByIdAndUpdate(
-        req.params.id,
-        {$inc: {qty : -1}},
-        {
-            new: true,
-        },
-        (error, updatedProduct) => {
+    // Product.findByIdAndUpdate(req.params.id,
+    //     { $inc : {qty : 1}},
+    //     funtion (err, updatedProduct) => {
+    //         res.redirect(`/shop/${req.params.id}`)
+    //     })
+        
+// })
+    Product.findById(req.params.id, (err, foundProduct) => {
+        let newQty = foundProduct.qty - 1
+        foundProduct.qty = newQty
+        foundProduct.save();
+        res.redirect(`/shop/${req.params.id}`)
+        console.log(foundProduct)
+    });
+
+    // Product.findByIdAndUpdate(
+    //     req.params.id,
+    //     {$set: 
+    //         {
+    //             qty:
+    //         }
+    //     },
+    //     (error, updatedProduct) => {
             
-            res.redirect(`/shop/${req.params.id}`)
-        }
-    )
+    //         res.redirect(`/shop/${req.params.id}`)
+    //     }
+    // )
 })
 
 
