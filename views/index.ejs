@@ -13,7 +13,7 @@
     <h1>Shop Main</h1>
     <ul>
         <% products.forEach(product => { %>
-            <li><img src="<%= product.image %>" alt="<%= product.name %>"></li>
+            <li><a href="/shop/<%=product._id;%>"><img src="<%= product.image %>" alt="<%= product.name %>"></li></a>
             
         <% }) %>
     </ul>

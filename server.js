@@ -80,7 +80,13 @@ app.post('/shop', (req, res) => {
 });
 // Edit
 // Show
-
+app.get("/shop/:id", (req, res) => {
+    Product.findById(req.params.id, (err, foundProduct) => {
+        res.render("show.ejs", {
+            product: foundProduct,
+        })
+    });
+});
 // =================================================
 // Port Listening?
 app.listen(PORT, () => {
