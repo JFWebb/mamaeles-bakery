@@ -1,20 +1,26 @@
 module.exports = [{
-    name: 'Beans',
-    description: 'A small pile of beans. Buy more beans for a big pile of beans.',
-    image: 'https://imgur.com/LEHS8h3.png',
-    price: 5,
+    name: 'Blintz',
+    description: 'A rolled pancake filled with cheese and jam, then fried.',
+    image: 'https://i.imgur.com/7QjGIgl.jpg',
+    price: 3,
     qty: 99
   }, {
-    name: 'Bones',
-    description: "It's just a bag of bones.",
-    image: 'https://imgur.com/dalOqwk.png',
+    name: 'Babka',
+    description: "Sweet bread braided with stripes of rich chocolate.",
+    image: 'https://i.imgur.com/nVboUmR.jpg',
     price: 25,
     qty: 0
   }, {
-    name: 'Bins',
-    description: 'A stack of colorful bins for your beans and bones.',
-    image: 'https://imgur.com/ptWDPO1.png',
-    price: 7000,
-    qty: 1
-  }
+    name: 'Sufganiyot',
+    description: 'Donut filled with jelly and topped with powdered sugar.',
+    image: 'https://i.imgur.com/f21znqy.png',
+    price: 3,
+    qty: 50
+  }, {
+    name: 'Challah',
+    description: 'Braided load of bread.',
+    image: 'https://i.imgur.com/NMVSBEx.jpg',
+    price: 5,
+    qty: 30
+  },
 ];

@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Main</title>
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
     <nav>
         <a href="/shop/new">Add a New Product</a>
     </nav>
-    <h1>Shop Main</h1>
-    <ul>
+    <h1>Mamaele's Pastry</h1>
+    <ul id="product list">
         <% products.forEach(product => { %>
-            <li><a href="/shop/<%=product._id;%>"><img src="<%= product.image %>" alt="<%= product.name %>"></li></a>
+            <li class="productItem"><a href="/shop/<%=product._id;%>"><img src="<%= product.image %>" alt="<%= product.name %>" width="200";></li></a>
             
         <% }) %>
     </ul>
