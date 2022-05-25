@@ -5,13 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Shop Item</title>
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="/shop/<%=product._id;%>">Back to Item</a></li>
+        </ul>
+    </nav>
+    <h1>Mamaele's Pastry</h1>
+    <h2 id="tagline">✦ tzuker-zis ✦</h2>
     <div class="container">
-        <div class="sidebar"></div>
-        <div class="newItemForm">
-            <h1>Edit Shop Item</h1>
-            <form action="/shop/<%=product._id%>?_method=PUT" method="POST">
+        <div>
+            <h2>Edit Shop Item</h2>
+            <form action="/shop/<%=product._id%>?_method=PUT" method="POST" class="userForm">
                 <!-- name -->
                 <label for="name">NAME</label>
                 <input type="text" id="name" name="name" value="<%=product.name%>" />

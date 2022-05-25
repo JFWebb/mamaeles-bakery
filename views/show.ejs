@@ -10,18 +10,18 @@
 <body>
     <nav>
         <ul>
-            <li> <a href="/shop/<%=product._id %>/edit">Edit Item</a></li>
             <li><a href="/shop">Back to Products</a></li>
         </ul>
     </nav>
     <h1>Mamaele's Pastry</h1>
+    <h2 id="tagline">✦ tzuker-zis ✦</h2>
     <img src="<%= product.image %>" alt="<%= product.name %>" width="200";>
-    <h2><%=product.name%></h2>
-    <ul>
-        <li><%=product.name%></li>
+    <h2 class="showName"><%=product.name%></h2>
+    <a href="/shop/<%=product._id %>/edit" class="editLink">(Edit Item)</a>
+    <ul id="productDetails">
         <li><%=product.description%></li>
-        <li><%=product.price%></li>
-        <li><%=product.qty%></li>
+        <li>$<%=product.price%> ea.</li>
+        <li><%=product.qty%> Left in Store Today</li>
     </ul>
     <% if (product.qty > 0) { %>
         <form action="/shop/<%=product._id%>?_method=PATCH" method="POST">
