@@ -9,10 +9,13 @@
 </head>
 <body>
     <nav>
-        <a href="/shop/new">Add a New Product</a>
+        <ul>
+            <li><a href="/shop/new">Add New Item</a></li>
+        </ul>
     </nav>
     <h1>Mamaele's Pastry</h1>
-    <ul id="product list">
+    <h2 id="tagline">✦ tzuker-zis ✦</h2>
+    <ul id="productList">
         <% products.forEach(product => { %>
             <li class="productItem"><a href="/shop/<%=product._id;%>"><img src="<%= product.image %>" alt="<%= product.name %>" width="200";></li></a>
             

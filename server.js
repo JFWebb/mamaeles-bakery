@@ -10,6 +10,7 @@ const mongoose = require('mongoose');
 // const { create } = require("./models/products.js");
 const PORT = process.env.PORT || 3000;
 const Product = require("./models/product.js");
+const router = express.Router();
 
 // -- databases
 mongoose.connect(process.env.DATABASE_URL, {
@@ -64,21 +65,64 @@ app.get("/shop/new", (req, res) => {
     res.render("new.ejs");
 });
 // Destroy
+app.delete('/shop/:id', (req, res) => {
+    Product.findByIdAndRemove(req.params.id, (err, data) => {
+        res.redirect('/shop')
+    })
+})
 // Update
+app.put("/shop/:id", (req, res) => {
+    req.body.price = Number(req.body.price);
+    req.body.qty = Number (req.body.qty)
+    Product.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        {
+            new: true,
+        },
+        (error, updatedProduct) => {
+            res.redirect(`/shop/${req.params.id}`)
+        }
+    )
+})
+
+app.patch("/shop/:id", (req, res) => {
+    // req.body.qty = Number (req.body.qty)
+    // console.log(req.body);
+    // req.body.qty -= req.body.qty;
+    console.log(req.body)
+    Product.findByIdAndUpdate(
+        req.params.id,
+        {$inc: {qty : -1}},
+        {
+            new: true,
+        },
+        (error, updatedProduct) => {
+            
+            res.redirect(`/shop/${req.params.id}`)
+        }
+    )
+})
+
+
 // Create
 app.post('/shop', (req, res) => {
     req.body.price = Number(req.body.price);
     req.body.qty = Number (req.body.qty)
-    console.log("req.body :")
-    console.log(req.body)
     Product.create(req.body, (error, createdProduct) => {
-        console.log("created product:")
         console.log(createdProduct);
         res.redirect("/shop");
-        console.log(error)
     });   
 });
+
 // Edit
+app.get('/shop/:id/edit', (req, res) => {
+    Product.findById(req.params.id, (err, foundProduct) => {
+        res.render("edit.ejs", {
+            product: foundProduct,
+        })
+    })
+})
 // Show
 app.get("/shop/:id", (req, res) => {
     Product.findById(req.params.id, (err, foundProduct) => {

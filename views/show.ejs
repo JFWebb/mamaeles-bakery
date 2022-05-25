@@ -5,11 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Details</title>
+    <link rel="stylesheet" href="/css/styles.css" />
 </head>
 <body>
     <nav>
-        <a href="/shop">Back to Products</a>
+        <ul>
+            <li> <a href="/shop/<%=product._id %>/edit">Edit Item</a></li>
+            <li><a href="/shop">Back to Products</a></li>
+        </ul>
     </nav>
-    <h1><%=product.name%></h1>
+    <h1>Mamaele's Pastry</h1>
+    <img src="<%= product.image %>" alt="<%= product.name %>" width="200";>
+    <h2><%=product.name%></h2>
+    <ul>
+        <li><%=product.name%></li>
+        <li><%=product.description%></li>
+        <li><%=product.price%></li>
+        <li><%=product.qty%></li>
+    </ul>
+    <% if (product.qty > 0) { %>
+        <form action="/shop/<%=product._id%>?_method=PATCH" method="POST">
+            <input type="hidden" name="qty">
+            <input type="submit" value="Buy" />
+        </form>
+    <% } else { %>
+        <p>Sorry, we are out of stock</p>
+    <% } %>
+    <form action="/shop/<%=product._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Product" />
+    </form>
+
 </body>
 </html>

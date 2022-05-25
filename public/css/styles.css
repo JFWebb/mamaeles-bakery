@@ -3,11 +3,17 @@
 /* GENERAL */
 body {
     /* background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%); */
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
     background: #fff;
     font-family: 'Lato', sans-serif;
 }
 
 nav {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
     width: 100vw;
     padding: 1em;
     background: rgb(250, 242, 244);
@@ -21,14 +27,48 @@ h1{
     color: #CD5334;
 }
 
+#tagline{
+    font-size: 1.5em;
+    font-style: italic;
+    color: #CD5334;
+    margin: -2.5em auto auto auto;
+}
+
 /* FORMS */
 
 /* LINKS */
 a{
     color: #000;
     text-decoration: none;
+    transition: 0.15s;
 }
 a:hover{
     /* color: #00f; */
     color: #CD5334;
+}
+
+/* Lists */
+nav > ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+
+#productList {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+}
+
+/* Images */
+.productItem > a > img {
+    padding: 0.5em;
+    opacity: 70%;
+}
+
+.productItem > a > img:hover {
+    opacity: 100%;
+    transition: 0.3s
 }
