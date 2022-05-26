@@ -19,6 +19,10 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
+* {
+    -webkit-font-smoothing: antialiased;
+}
+
 nav {
     position: fixed;
     top: 0;
