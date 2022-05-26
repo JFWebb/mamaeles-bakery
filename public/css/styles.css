@@ -3,36 +3,46 @@
 
 :root {
     --pink: #FAF4F2;
+    --dpink: #f5e3e7;
     --red: #CD5334;
 }
 
 /* GENERAL */
 body {
     /* background: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%); */
-    width: 100vw;
-    height: 90vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
     background: #fff;
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 nav {
-    width: 100vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    padding: 1em;
+    padding: 0.5em;
     background: var(--pink);
 }
 
+.productContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5em;
+}
 /* HEADERS */
 
 h1 {
+    padding: 0.5em 0 0 0;
     font-family: 'Berkshire Swash', cursive;
     font-size: 5em;
+    text-align: center;
     color: var(--red);
 }
 
@@ -91,19 +101,12 @@ nav > ul {
 
 #productList {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
+    justify-content: center;
+    width: 60vw;
+    padding: 1em;
     list-style: none;
-}
-
-/* Images */
-.productItem>a>img {
-    padding: 0.5em;
-    opacity: 70%;
-}
-
-.productItem>a>img:hover {
-    opacity: 100%;
-    transition: 0.3s
 }
 
 #productDetails {
@@ -112,6 +115,25 @@ nav > ul {
     align-items: center;
     list-style: none;
     padding-left: 0;
+    text-align: center;
+}
+
+#productDetails > li {
+    padding: 0.2em;
+}
+/* Images */
+image {
+    max-height: 100%
+    width: auto;
+}
+.productItem>a>img {
+    padding: 0.5em;
+    opacity: 70%;
+}
+
+.productItem>a>img:hover {
+    opacity: 100%;
+    transition: 0.3s
 }
 
 /* Buttons */
@@ -132,4 +154,25 @@ input[type=submit]:hover {
 
 input[type=submit]:focus {
     background: var(--red);
+}
+
+/* MEDIA QUERIES*/
+@media (min-width: 320px) and (max-width: 480px) {
+
+    nav {
+        padding: 0.15em;
+    }
+  
+    h1{
+        padding: 0.75em 0 0 0;
+        font-size: 2.5em;
+    }
+
+    #tagline {
+        font-size: 1em;
+        font-style: italic;
+        color: var(--red);
+        margin: -1.5em auto auto auto;
+    }
+    
 }
