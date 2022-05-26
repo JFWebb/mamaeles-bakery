@@ -158,12 +158,14 @@ input[type=submit]:focus {
 }
 
 #delete{
+    margin: 0.5em;
     width: 100px;
-    opacity: 50%;
+    opacity: 40%;
     font-size: 0.65em;
 }
 
 #buy{
+    margin: 0.5em;
     width: 100px;
     font-size: 1.10em;
 }
