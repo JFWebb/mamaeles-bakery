@@ -58,6 +58,9 @@ h1 {
     font-size: 2.5em;
 }
 
+#formHeader{
+    margin: 2em 1em 0em 1em;
+}
 /* FORMS */
 .userForm {
     display: flex;
