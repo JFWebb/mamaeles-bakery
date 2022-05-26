@@ -113,13 +113,14 @@ nav > ul {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    width: 35vw;
     list-style: none;
     padding-left: 0;
     text-align: center;
 }
 
 #productDetails > li {
-    padding: 0.2em;
+    padding: 0.3em;
 }
 /* Images */
 image {

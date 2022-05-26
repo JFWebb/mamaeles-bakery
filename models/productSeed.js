@@ -22,5 +22,29 @@ module.exports = [{
     image: 'https://i.imgur.com/NMVSBEx.jpg',
     price: 5,
     qty: 30
+  },{
+    name: 'Hamentashen',
+    description: 'Triangular filled-pocket pastry.',
+    image: 'https://i.imgur.com/BnsQzbo.jpg',
+    price: 1,
+    qty: 100
+  },{
+    name: 'Halvah',
+    description: 'Confectionary made of seaseme seed paste and sweeted with honey, mixed with chocolate or nuts.',
+    image: 'https://i.imgur.com/kDaqWGi.jpg',
+    price: 3,
+    qty: 20
+  },{
+    name: 'Rugelach',
+    description: 'The word “Rugelach” is Yiddish that means “little twists” and are cookies that can be filled with a variety of ingredients.',
+    image: 'https://i.imgur.com/PBvwoDJ.jpg',
+    price: 1,
+    qty: 20
+  },{
+    name: 'Mandelbrot',
+    description: 'The Jewish answer to Italian biscotti. The name translates to “almond bread” in Yiddish though add-ins like candied fruit, chocolate, and other nuts are also common.',
+    image: 'https://i.imgur.com/KUCSqJ9.jpg',
+    price: 2.50,
+    qty: 40
   },
 ];
