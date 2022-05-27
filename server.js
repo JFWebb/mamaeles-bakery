@@ -40,7 +40,7 @@ app.use(express.static("public"));
 // ROUTES & CONTROLLERS
 // =================================================
 app.get('/', (req, res) => {
-	res.redirect('/shop')
+	res.redirect('/shop/seed')
 });
 
 const router = require('./controllers/products')
