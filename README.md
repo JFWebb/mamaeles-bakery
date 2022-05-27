@@ -10,7 +10,7 @@
 Welcome to Mamamele's Pastry! This store-front app was built as a first CRUD project using MongoDB.
 
 ## Getting Started
-[Click here](https://mamaelesbakery.herokuapp.com/) to see the deployed app! Click on one of the pastry images it's product page. Click on add a new product to add a new product to the bakery! You can also remove and edit products. Go to [https://mamaelesbakery.herokuapp.com/] to reset the application.
+[Click here](https://mamaelesbakery.herokuapp.com/) to see the deployed app! Click on one of the pastry images to show the product page. Click on add a new product to add a new product to the bakery! You can also remove and edit products. Go to [https://mamaelesbakery.herokuapp.com/] to reset the application.
 
 ## <a name="technologiesused"></a> Technologies Used
 * HTML5
