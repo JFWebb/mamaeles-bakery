@@ -39,8 +39,13 @@ app.use(express.static("public"));
 // =================================================
 // ROUTES & CONTROLLERS
 // =================================================
+app.get('/', (req, res) => {
+	res.redirect('/shop')
+});
+
 const router = require('./controllers/products')
 app.use('/shop', router);
+
 
 // =================================================
 // Port Listening?
