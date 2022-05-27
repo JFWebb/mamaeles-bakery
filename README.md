@@ -26,5 +26,4 @@ Welcome to Mamamele's Pastry! This store-front app was built as a first CRUD pro
 * method-override
 
 ## <a name="future"></a> What's Next?
-* Upload to Heroku
 * Add shopping cart
