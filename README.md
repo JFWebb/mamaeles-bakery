@@ -7,7 +7,7 @@
 <img src="https://i.imgur.com/Hsu1iCj.png" alt="Mamele's New Item Page Screenshot"/>
 
 ## Description
-Welcome to Mamamele's Pastry. This web app is a first CRUD project using MongoDB.
+Welcome to Mamamele's Pastry! This store-front app was built as a first CRUD project using MongoDB.
 
 ## <a name="technologiesused"></a> Technologies Used
 * HTML5
